@@ -14,17 +14,17 @@ public abstract class CommentMapperDelegate implements CommentMapper {
     private DataBaseNewsService dataBaseNewsService;
 
     @Override
-    public Comment requestToComment(UpsertCommentRequest request) {
+    public Comment requestToComment(UpsertCommentRequest request, String username) {
         Comment comment = new Comment();
         comment.setText(request.getText());
-        comment.setAuthor(dataBaseUserService.findById(request.getAuthor_id()));
+        comment.setAuthor(dataBaseUserService.findByUsername(username));
         comment.setNews(dataBaseNewsService.findById(request.getNews_id()));
         return comment;
     }
 
     @Override
-    public Comment requestToComment(Long CommentId, UpsertCommentRequest request) {
-        Comment comment = requestToComment(request);
+    public Comment requestToComment(Long CommentId, UpsertCommentRequest request, String username) {
+        Comment comment = requestToComment(request, username);
         comment.setId(CommentId);
         return comment;
     }

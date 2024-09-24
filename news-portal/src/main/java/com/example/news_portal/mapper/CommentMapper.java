@@ -12,10 +12,10 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface CommentMapper {
 
-    Comment requestToComment (UpsertCommentRequest request);
+    Comment requestToComment (UpsertCommentRequest request, String username);
 
     @Mapping(source = "commentId", target = "id")
-    Comment requestToComment(Long commentId, UpsertCommentRequest request);
+    Comment requestToComment(Long commentId, UpsertCommentRequest request, String username);
 
     CommentResponse commentToCommentResponse(Comment comment);
 

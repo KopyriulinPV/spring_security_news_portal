@@ -15,7 +15,7 @@ public class UpsertNewsRequest {
     @NotBlank(message = "Текст статьи не может быть пустым!")
     private String content;
 
-    private Long author_id;
+    /*private Long author_id;*/
 
     private Long category_id;
 }

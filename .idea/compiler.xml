@@ -11,5 +11,8 @@
         <module name="news-portal.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring_security_news_portal" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -12,7 +12,7 @@ public class UpsertCommentRequest {
     @NotBlank(message = "Комментарий не может быть пустым!")
     private String text;
 
-    private Long author_id;
+    /*private Long author_id;*/
 
     private Long news_id;
 

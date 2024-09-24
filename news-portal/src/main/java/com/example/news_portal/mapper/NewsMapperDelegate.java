@@ -1,12 +1,10 @@
 package com.example.news_portal.mapper;
-
 import com.example.news_portal.DTO.NewsResponseForList;
 import com.example.news_portal.DTO.NewsResponseForSingleCall;
 import com.example.news_portal.DTO.UpsertNewsRequest;
 import com.example.news_portal.model.News;
 import com.example.news_portal.repository.CommentRepository;
 import com.example.news_portal.service.impl.DataBaseCategoryService;
-import com.example.news_portal.service.impl.DataBaseCommentService;
 import com.example.news_portal.service.impl.DataBaseUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -25,18 +23,18 @@ public abstract class NewsMapperDelegate implements NewsMapper {
 
 
     @Override
-    public News requestToNews(UpsertNewsRequest request) {
+    public News requestToNews(UpsertNewsRequest request, String username) {
         News news = new News();
         news.setTitle(request.getTitle());
         news.setContent(request.getContent());
-        news.setAuthor(dataBaseUserService.findById(request.getAuthor_id()));
+        news.setAuthor(dataBaseUserService.findByUsername(username));
         news.setCategory(dataBaseCategoryService.findById(request.getCategory_id()));
         return news;
     }
 
     @Override
-    public News requestToNews(Long newsId, UpsertNewsRequest request) {
-        News news = requestToNews(request);
+    public News requestToNews(Long newsId, UpsertNewsRequest request, String username) {
+        News news = requestToNews(request, username);
         news.setId(newsId);
         return news;
     }

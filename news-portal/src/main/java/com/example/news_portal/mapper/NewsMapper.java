@@ -12,10 +12,10 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface NewsMapper {
 
-    News requestToNews (UpsertNewsRequest request);
+    News requestToNews (UpsertNewsRequest request, String username);
 
     @Mapping(source = "newsId", target = "id")
-    News requestToNews(Long newsId, UpsertNewsRequest request);
+    News requestToNews(Long newsId, UpsertNewsRequest request, String username);
 
     NewsResponseForSingleCall newsToNewsResponseForSingleCall(News news);
 

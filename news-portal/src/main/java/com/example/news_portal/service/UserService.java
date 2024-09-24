@@ -1,6 +1,7 @@
 package com.example.news_portal.service;
 
 import com.example.news_portal.DTO.UserFilter;
+import com.example.news_portal.model.RoleType;
 import com.example.news_portal.model.User;
 import org.springframework.data.domain.Pageable;
 
@@ -12,9 +13,11 @@ public interface UserService {
 
     User findById(Long id);
 
-    User save(User user);
+    User save(User user, RoleType roleType);
 
     User update(User user);
+
+    User findByUsername(String username);
 
     void deleteById(Long id);
 

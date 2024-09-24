@@ -10,4 +10,6 @@ import lombok.NoArgsConstructor;
 public class UpsertUserRequest {
     @NotBlank(message = "Имя категории должно быть заполнено!")
     private String userName;
+
+    private String password;
 }
