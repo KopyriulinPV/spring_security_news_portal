@@ -1,5 +1,5 @@
 package com.example.news_portal.validation;
-import com.example.news_portal.DTO.CommentFilter;
+
 import com.example.news_portal.DTO.NewsFilter;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

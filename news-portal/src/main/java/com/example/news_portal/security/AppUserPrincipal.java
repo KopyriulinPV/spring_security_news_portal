@@ -1,6 +1,4 @@
-
 package com.example.news_portal.security;
-
 
 import com.example.news_portal.model.Role;
 import com.example.news_portal.model.User;

@@ -1,10 +1,8 @@
 package com.example.news_portal.aopSpringSecurity;
 
 import com.example.news_portal.model.Comment;
-import com.example.news_portal.model.News;
 import com.example.news_portal.model.User;
 import com.example.news_portal.repository.CommentRepository;
-import com.example.news_portal.repository.NewsRepository;
 import com.example.news_portal.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;

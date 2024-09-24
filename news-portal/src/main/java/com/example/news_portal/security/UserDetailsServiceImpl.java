@@ -1,4 +1,3 @@
-
 package com.example.news_portal.security;
 
 import com.example.news_portal.service.UserService;

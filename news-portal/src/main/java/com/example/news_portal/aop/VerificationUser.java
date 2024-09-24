@@ -1,5 +1,5 @@
 package com.example.news_portal.aop;
-import com.example.news_portal.model.User;
+
 import com.example.news_portal.repository.NewsRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
