@@ -1,5 +1,7 @@
 REST API (добавлены Basic-аутентификация и права пользователей на доступ к методам контроллеров) 
-для новостного сервиса. 
+для новостного сервиса.
+
+Используемые технологии: Spring Boot, JPA, Lombok, MapStruct, Spring Security, PostgreSQL, OpenAPI, Spring Web, Spring Validation, JUnit, JSON Unit.
 
 Для запуска базы данных необходимо:
 
